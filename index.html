@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doble Click Fotografía | Portfolio</title>
+    <!-- Vinculación de la hoja de estilos externa -->
+    <link rel="stylesheet" href="./estilo/style.css">
+    <!-- Tipografía moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CABECERA / MENÚ DE NAVEGACIÓN (Logo Izquierda, Menú Derecha) -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- Vuestro logotipo con tamaño destacado -->
+            <img src="images/logo_encabezado.png" alt="Doble Click Fotografía" class="logo">
+        </div>
+        <nav class="nav">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (BIENVENIDA) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Capturando momentos</h1>
+            <p>Por Rebeca & David</p>
+            <a href="#portfolio" class="btn">Ver Portfolio</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="about-section">
+        <div class="about-container">
+            <h2>Detrás de la cámara</h2>
+            <div class="linea-decorativa"></div>
+            <p>Somos <strong>Rebeca y David</strong>, dos profesionales de la fotografía que unieron sus visiones para crear Doble Click. No entendemos la fotografía sin emoción. Nos adaptamos a cualquier reto. No hacemos fotos para que se vean, las hacemos para que se sientan. ¿Qué historia vamos a contar hoy?</p> 
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTFOLIO -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>Nuestro Portfolio</h2>
+        <div class="linea-decorativa"></div>
+        
+        <!-- Filtros de Categorías -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="conciertos">Conciertos</button>
+            <button class="filter-btn" data-filter="retratos">Retratos</button>
+            <button class="filter-btn" data-filter="coches">Coches</button>
+        </div>
+
+        <!-- Galería Grid -->
+        <div class="gallery-grid">
+            <!-- Foto 1 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/001.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 2 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/002.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 3 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/003.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 4 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/004.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 5 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/005.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 6 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/006.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 7 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/007.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 8 (Concierto) -->
+            <div class="gallery-item conciertos">
+                <img src="./galeria/conciertos/008.webp" alt="Sesión de Concierto">
+                <div class="overlay"><div class="text">Concierto</div></div>
+            </div>
+            <!-- Foto 9 (Coches) -->
+            <div class="gallery-item coches">
+                <img src="./galeria/coches/001.webp" alt="Sesión de Coches">
+                <div class="overlay"><div class="text">Coches</div></div>
+            </div>
+            <!-- Foto 10 (Coches) -->
+            <div class="gallery-item coches">
+                <img src="./galeria/coches/002.webp" alt="Sesión de Coches">
+                <div class="overlay"><div class="text">Coches</div></div>
+            </div>
+            <!-- Foto 11 (Coches) -->
+            <div class="gallery-item coches">
+                <img src="./galeria/coches/003.webp" alt="Sesión de Coches">
+                <div class="overlay"><div class="text">Coches</div></div>
+            </div>
+            <!-- Foto 12 (Coches) -->
+            <div class="gallery-item coches">
+                <img src="./galeria/coches/004.webp" alt="Sesión de Coches">
+                <div class="overlay"><div class="text">Coches</div></div>
+            </div>
+            <!-- Foto 13 (Retratos) -->
+            <div class="gallery-item retratos">
+                <img src="./galeria/retratos/001.webp" alt="Sesión de Retratos">
+                <div class="overlay"><div class="text">Retratos</div></div>
+            </div>
+            <!-- Foto 14 (Retratos) -->
+            <div class="gallery-item retratos">
+                <img src="./galeria/retratos/002.webp" alt="Sesión de Retratos">
+                <div class="overlay"><div class="text">Retratos</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTRUCTURA DEL LIGHTBOX (VENTANA PARA MOSTRAR LA FOTO GRANDE) -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <footer id="contacto" class="footer">
+        <div class="contacto-container">
+            <h2>¿Hablamos?</h2>
+            <p class="contacto-sub">Contadnos vuestra idea y hagámosla realidad.</p>
+            
+            <div class="contacto-links">
+                <!-- Enlace a vuestro perfil de Instagram -->
+                <a href="https://instagram.com/dobleclick.foto" target="_blank" class="contacto-destacado instagram-link">
+                    @dobleclick.foto
+                </a>
+                <!-- Enlace a vuestro teléfono móvil -->
+                <a href="tel:+34645193839" class="contacto-destacado telefono-link">
+                    +34 645 19 38 39
+                </a>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>© 2026 Doble Click Fotografía. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script lógico (Filtros + Ampliación Lightbox) -->
+    <script>
+        // Lógica de los filtros de vuestro porfolio
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // NUEVA LÓGICA: Ampliación de fotos (Lightbox)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgElement = item.querySelector('img');
+                lightbox.style.display = 'flex';
+                lightboxImg.src = imgElement.src;
+                lightboxImg.alt = imgElement.alt;
+            });
+        });
+
+        // Cerrar al pulsar en la "X"
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Cerrar de forma intuitiva si hacen clic fuera de la foto ampliada
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg && e.target !== closeBtn) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

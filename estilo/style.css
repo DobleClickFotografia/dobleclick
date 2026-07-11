@@ -1,0 +1,388 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* --- CABECERA & NAVEGACIÓN (Logo Izquierda, Menú Derecha) --- */
+.header {
+    display: flex;
+    flex-direction: row;       /* Alineación en línea horizontal */
+    justify-content: space-between; /* Separa los extremos: logo izquierda, menú derecha */
+    align-items: center;       /* Centrado vertical perfecto entre ambos */
+    padding: 20px 5%;          
+    background-color: rgba(11, 11, 11, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenedor al inicio (izquierda) */
+}
+
+.logo-container .logo {
+    height: 110px !important;  /* Mantiene un gran tamaño e impacto visual */
+    width: auto !important;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;                 /* Separación idónea entre secciones */
+}
+
+.nav a {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav a:hover {
+    color: #cccccc;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.btn {
+    border: 1px solid #ffffff;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #0b0b0b;
+}
+
+/* --- SECCIÓN SOBRE NOSOTROS --- */
+.about-section {
+    background-color: #111111;
+    padding: 90px 5%;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.about-container p {
+    color: #cccccc;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* --- PORTFOLIO Y FILTROS --- */
+.portfolio-section {
+    padding: 90px 5%;
+    text-align: center;
+    background-color: #0b0b0b;
+}
+
+.portfolio-section h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.linea-decorativa {
+    width: 60px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px auto 40px auto;
+}
+
+.filter-buttons {
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* GRID RESPONSIVE DE IMÁGENES */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    background-color: #111;
+    transition: opacity 0.3s ease;
+    cursor: pointer; /* Indica visualmente que la foto se puede pulsar */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/* --- ESTILOS AGREGADOS PARA EL LIGHTBOX (VENTANA FLOTANTE) --- */
+.lightbox {
+    display: none; /* Oculto por defecto hasta hacer click */
+    position: fixed;
+    z-index: 2000; /* Asegura estar por encima del menú fijo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo oscuro del lightbox */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain; /* Evita que la foto grande se deforme o se recorte */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    animation: zoomInLightbox 0.3s ease; /* Efecto sutil de apertura pop-up */
+}
+
+@keyframes zoomInLightbox {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.lightbox-close:hover {
+    color: #aaaaaa;
+}
+
+/* --- APARTADO DE CONTACTO / PIE DE PÁGINA --- */
+.footer {
+    padding: 90px 5% 40px 5%;
+    text-align: center;
+    background-color: #111111;
+    border-top: 1px solid #1a1a1a;
+}
+
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.contacto-container h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contacto-sub {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.contacto-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.contacto-destacado {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent;
+}
+
+.instagram-link:hover, .telefono-link:hover {
+    color: #cccccc;
+    border-bottom: 2px solid #ffffff;
+}
+
+.email-secundario {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.email-secundario a {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+.email-secundario a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #444;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 30px;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE / ADAPTACIÓN A DISPOSITIVOS MÓVILES --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* En móviles vuelve a formato columna para que no se amontone */
+        padding: 25px 5%;
+        gap: 15px;
+    }
+    
+    .logo-container .logo {
+        height: 80px !important; /* Escalado sutil para smartphones */
+    }
+
+    .nav {
+        gap: 25px;
+    }
+
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .contacto-destacado {
+        font-size: 1.3rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 300px;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 25px;
+        font-size: 35px;
+    }
+}
